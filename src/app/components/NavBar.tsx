@@ -9,15 +9,15 @@ export default function Navbar() {
     useEffect(() => {
         const updateDateTime = () => {
             const now = new Date();
-            const dateOptions = {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric",
+            const dateOptions: Intl.DateTimeFormatOptions = {
+                weekday: "long", // Correct type: "long" | "short" | "narrow"
+                year: "numeric", // Correct type: "numeric" | "2-digit"
+                month: "long",   // Correct type: "long" | "short" | "narrow" | "numeric" | "2-digit"
+                day: "numeric",  // Correct type: "numeric" | "2-digit"
             };
-            const timeOptions = {
-                hour: "2-digit",
-                minute: "2-digit",
+            const timeOptions: Intl.DateTimeFormatOptions = {
+                hour: "2-digit",  // Correct type: "numeric" | "2-digit"
+                minute: "2-digit", // Correct type: "numeric" | "2-digit"
                 hour12: false,
             };
 
